@@ -5,7 +5,9 @@ module.exports = {
     /*
       Add altering commands here.
       Return a promise to correctly handle asynchronicity.
-
+*/
+      return queryInterface.addColumn('Contacts','email', Sequelize.STRING);
+/*
       Example:
       return queryInterface.createTable('users', { id: Sequelize.INTEGER });
     */
@@ -15,7 +17,9 @@ module.exports = {
     /*
       Add reverting commands here.
       Return a promise to correctly handle asynchronicity.
-
+      */
+            return queryInterface.removeColumn('Contacts', 'email');
+      /*
       Example:
       return queryInterface.dropTable('users');
     */
